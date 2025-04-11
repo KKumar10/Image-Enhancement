@@ -1,3 +1,10 @@
 <?php
-mail('krunalk1004@gmail.com','Test Subject','Hey there signup to my website. Thank you.','From: krunalkamleshkumar10@gmail.com');
- ?>
+function sendVerificationEmail($email, $token) {
+    $subject = "Verify Your Account";
+    $link = "http://localhost/Image-Enhancement-main/verification.php?email=$email&token=$token";
+    $message = "Click the link to verify your email:\n\n$link";
+
+    $headers = "From: no-reply@yourdomain.com";
+
+    mail($email, $subject, $message, $headers);
+}
