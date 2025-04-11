@@ -1,5 +1,5 @@
 /*Styling html and body elements*/
-html,body {
+html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -9,41 +9,25 @@ html,body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(20, 0, 255, 0.8), rgba(255, 0, 173, 0.7)),url(../images/back.jpg);
+  background-image: linear-gradient(rgba(20, 0, 255, 0.8), rgba(255, 0, 173, 0.7)), url(../images/back.jpg);
 }
 
-/*Scroolbar Design CSS*/
+/*Scrollbar Design*/
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 10px;
 }
-
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-/*Backround image CSS*/
-.hero {
-  height:100%;
-  width:100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),url(../images/back.jpg);
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-}
-
-/*Header Design CSS*/
+/*Title style*/
 .title {
   text-align: center;
   position: relative;
@@ -54,110 +38,58 @@ html,body {
   font-weight: bolder;
 }
 
-/*Navigation Design CSS*/
+/*Navigation Design*/
 strong {
   position: relative;
-  left:15px;
-  top:5px;
+  left: 15px;
+  top: 5px;
 }
-
 nav {
   margin: auto;
   position: fixed;
-  top:-10px;
+  top: -10px;
   width: 100%;
   line-height: 10px;
   z-index: 1;
 }
-
 nav ul {
   text-align: center;
 }
-
 nav ul li {
   display: inline-table;
   padding: 16px 5px;
 }
-
 nav.black {
-  background:  #211b1e;
+  background: #211b1e;
 }
-
 nav a {
   border: 2px solid transparent;
   border-radius: 3px;
   padding: 2px 5px;
   position: relative;
 }
-
 a.active, nav a:hover {
   border: 2px solid #fff;
   transition: 0.5s;
 }
-
 nav ul li a {
   text-decoration: none;
   color: #fff;
   font-size: 19px;
   position: relative;
-  top:5px;
-}
-
-/*Login and Register in navbar design CSS*/
-nav .toggle-btn {
-  background: linear-gradient(to right, #6A14BA, #B379F4);
-  border-radius: 30px;
-  text-align: center;
-  font-size: 13.5px;
-  text-decoration: none;
-}
-
-nav .toggle-btn {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.toggle-btn {
-  padding: 10px 30px;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  outline: none;
-  position: relative;
-  color: #fff;
-}
-
-/*Logout button navbar design CSS*/
-.logout-btn {
-  position: relative;
-  left:18px;
   top: 5px;
 }
-
-nav .logout-btn {
+nav .toggle-btn, nav .logout-btn {
   background: linear-gradient(to right, #6A14BA, #B379F4);
   border-radius: 30px;
   text-align: center;
   font-size: 13.5px;
   text-decoration: none;
+  padding: 7px 15px;
+  color: white;
 }
 
-nav .logout-btn {
-  padding-right: 10px;
-  padding-left: 10px;
-}
-
-.logout-btn {
-  padding: 7px 7px;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  outline: none;
-  position: relative;
-  color: #fff;
-}
-
-/*Drag and drop CSS*/
+/*Drag and Drop Section*/
 .drop-zone {
   border: 3px dashed #fff;
   height: 500px;
@@ -170,47 +102,40 @@ nav .logout-btn {
   margin: auto;
   width: 70%;
 }
-
-#drag-drop p{
-  color:#fff;
+#drag-drop p {
+  color: #fff;
   font-size: 30px;
 }
-
 .drop-zone .icon i {
-    font-size: 4rem;
-    color: #fff;
-    position: relative;
-    top:20px;
+  font-size: 4rem;
+  color: #fff;
+  position: relative;
+  top: 20px;
 }
-
 .drop-zone span {
   font-size: 20px;
 }
 
-/*Choose file button  CSS*/
+/*Choose file button*/
 .choose-btn button {
   border-radius: 5px;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
-  border-right: 3px solid black;
-  border-left: 3px solid black;
+  border: 3px solid black;
   background: transparent;
   color: #fff;
   font-size: 25px;
   position: relative;
   top: 30px;
-  padding: 3px 5px 3px 5px;
+  padding: 3px 5px;
   cursor: pointer;
 }
 
-/*Original and Enhanced Image CSS*/
+/*Image preview containers*/
 .images-container {
   display: flex;
   justify-content: space-around;
   width: 100%;
   height: 100%;
 }
-
 .original-image,
 .enhanced-image {
   display: flex;
@@ -222,196 +147,157 @@ nav .logout-btn {
   text-align: center;
   overflow: hidden;
 }
-
 .original-image img,
 .enhanced-image img {
   width: 350px;
   height: 350px;
-}
-
-.original-image img,
-.enhanced-image img {
   max-width: 90%;
   max-height: 90%;
   object-fit: scale-down;
   display: grid;
 }
 
-/*Referesh, Enhance and Dowload butotn CSS*/
-.start-again{
+/*Enhance/Refresh/Download buttons*/
+.start-again,
+.download-enhance,
+.enhance-btn {
   position: relative;
   bottom: 40px;
 }
 
-.download-enhance{
+/*Ratio and format dropdowns*/
+.ratio_label,
+.format_label,
+.clarity_label,
+.face_label {
   position: relative;
-  bottom: 40px;
+  bottom: 25px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 5px;
 }
 
-.enhance-btn{
-  position: relative;
-  bottom: 50px;
-}
-
-/*Ratios and Format dropdown CSS*/
-.ratio_label{
-  position: relative;
-  bottom: 30px;
-}
-
-#ratio{
-  position: relative;
-  bottom: 30px;
-}
-
-.format_label{
+#ratio,
+#format {
   position: relative;
   bottom: 25px;
 }
 
-#format{
-  position: relative;
-  bottom: 25px;
+/*Checkbox styling*/
+#clarity,
+#face {
+  margin-left: 10px;
+  transform: scale(1.3);
+  margin-right: 5px;
 }
 
-
-/*Form CSS*/
-.form-box {
-  width: 380px;
-  height: 500px;
-  position: relative;
-  margin: 6% auto;
-  background: #000000;
-  box-shadow: 0 0 20px 5px blue;
-  padding: 5px;
-  overflow: hidden;
-  top:80px;
-}
-
-/*Filling the form field CSS*/
-.input-group {
-  top:150px;
-  left:50px;
-  position: absolute;
-  width: 280px;
-  transition: 0.5s;
-  padding: 10px 0;
-}
-
-.input-field {
-  width: 100%;
-  padding: 10px 0;
-  margin: 5px 0;
-  border-left: 0 transparent;
-  border-right: 0 transparent;
-  border-top: 0 transparent;
-  border-bottom: 1px solid #999;
-  outline: none;
-  background: transparent;
-  resize: block;
-  color: #fff;
-}
-
-/*Login and Register button in form page CSS*/
-.button-box {
-  width: 220px;
-  margin: 35px auto;
-  position: relative;
-  box-shadow: 0 0 20px 2px #5C0AB6;
-  border-radius: 30px;
-}
-
-#btn {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 110px;
-  height: 100%;
-  background: linear-gradient(to right, #6A14BA, #B379F4);
-  border-radius: 30px;
-  transition: 0.5s;
-}
-
-.submit-btn {
-  width: 45%;
-  padding: 10px 30px;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-  background: linear-gradient(to right, #6A14BA, #B379F4);
-  border: 0;
-  outline: none;
-  border-radius: 30px;
-  color: #fff;
-}
-
-/*Login form CSS*/
-#login {
-  left: 50px;
-}
-
-#login a{
-  position: relative;
-  left: 95px;
-  top:12px;
-  color: #777;
-  font-size: 12px;
-}
-
-#login span {
-  color: #777;
-  font-size: 12px;
-  top: 133px;
-  position: absolute;
-}
-
-/*Registration form CSS*/
-#register {
-  left: 450px;
-}
-
-#register a{
-  position: relative;
-  left: 88px;
-  top:5px;
-  color: #777;
-  font-size: 13px;
-}
-
-#register span {
-  color: #777;
-  font-size: 12px;
-  bottom: 95px;
-  position: absolute;
-}
-
-/*Verify CSS*/
+/*Verification page style*/
 .verify {
   font-size: 100px;
   text-align: center;
   position: relative;
-  top:100px;
+  top: 100px;
 }
-
 .verify h2 {
   font-family: 'Sansita', sans-serif;
   font-size: 30px;
   text-align: center;
 }
-
 .verify p {
   font-family: 'Sansita', sans-serif;
   font-size: 25px;
   color: #000;
-  margin-left: 30px;
-  margin-right:30px;
+  margin: 0 30px;
   text-align: center;
 }
 
-/*Error message CSS*/
+/* MODERN FORM STYLING (NEW form.php) */
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+.auth-card {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+  width: 100%;
+  max-width: 400px;
+}
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #fff;
+}
+.form-control {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.form-control input {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  background: #1e1e1e;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+.form-control input:focus {
+  border-color: #a855f7;
+  outline: none;
+}
 .error-message {
-  color: red;
-  font-size: 12px;
-  margin-top: 2px;
-  height: 15px; /* Adjust this value based on your font size and desired spacing */
+  color: #ff6b6b;
+  font-size: 13px;
+  margin-top: 6px;
+  padding-left: 5px;
+}
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(to right, #6A14BA, #B379F4);
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.auth-card button:hover {
+  background: linear-gradient(to right, #7e1ce0, #d28aff);
+}
+
+/* Progress Bar Styling */
+#progress-wrapper {
+  display: none;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 18px;
+  background-color: #444;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #6A14BA, #B379F4);
+  transition: width 0.2s ease;
+}
+
+#progress-text {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #fff;
 }
